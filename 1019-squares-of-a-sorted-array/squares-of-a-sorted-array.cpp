@@ -1,23 +1,24 @@
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& nums) {
-        int n = nums.size();
         //Umesh
+        int n = nums.size();
         vector<int> res(n);
-        int i = 0, j = n - 1, k = n - 1;
+        int i = 0, j = n - 1, k = 0;  
 
-        
         while (i <= j) {
             if (abs(nums[i]) > abs(nums[j])) {
-                res[k] = nums[i] * nums[i];  
+                res[k] = nums[i] * nums[i];
                 i++;
             } else {
-                res[k] = nums[j] * nums[j];  
+                res[k] = nums[j] * nums[j];
                 j--;
             }
-            k--;
+            k++;  
         }
 
+        reverse(res.begin(), res.end()); 
         return res;
     }
 };
+
