@@ -7,29 +7,19 @@ public:
         int i=0;
         int left=i+1;
         int right=n-1;
-        int max_diff= INT_MAX;
-        int closest_sum=nums[i]+nums[left]+nums[right];
-        
-        int diff;
-        
+        int closest_sum=nums[i]+nums[left]+nums[right]; 
         for(i=0;i<n-2;i++){
-            int left=i+1;
+        int left=i+1;
         int right=n-1;
         
             while(left<right){
                 int sum=nums[i]+nums[left]+nums[right];
                 if(sum==target){
                     return sum;
-
                 }
-                
-                    
                 else if (abs(sum-target)<abs(closest_sum-target)){
-                    closest_sum=sum;
-                    
-                }
-               
-                    
+                    closest_sum=sum;   
+                }  
                 else if(sum<target){
                     left++;
                 }
