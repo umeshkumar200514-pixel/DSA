@@ -1,22 +1,22 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-        // umesh
-        int i =0;
+        int n=nums.size();
+        int i=0;
         int res=1;
-        int j=1;
-        int n = nums.size();
-        while(j<n) {
-            if (nums[i]==nums[j]){
-                j++;
+        int k=1;
+         while(k<n){
+            if(nums[k]==nums[k-1]){
+                k++;
                 continue;}
-                
-            nums[i+1]=nums[j];
-            res++;
-            i++;
-            j++;
+
             
-        }
-       return res; 
+            nums[i+1]=nums[k];
+            i++;
+            res++;
+            k++;}
+    
+         return res;
+         
     }
 };
