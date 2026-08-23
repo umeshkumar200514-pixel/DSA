@@ -5,9 +5,8 @@ public:
         sort(nums.begin(),nums.end());
         int n=nums.size();
         int i=0;
-        int left=i+1;
-        int right=n-1;
-        int closest_sum=nums[i]+nums[left]+nums[right]; 
+        
+        int closest_sum=nums[i]+nums[1]+nums[2]; 
         for(i=0;i<n-2;i++){
         int left=i+1;
         int right=n-1;
